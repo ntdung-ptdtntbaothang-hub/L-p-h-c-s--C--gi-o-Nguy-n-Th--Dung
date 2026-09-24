@@ -5,11 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: 'L-p-h-c-s--C--gi-o-Nguy-n-Th--Dung/
-      server: 
-      port: 3000,
-      host: '0,0,0,0',
-    },
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
@@ -17,6 +13,8 @@ export default defineConfig(() => {
       },
     },
     server: {
+      port: 3000,
+      host: '0.0.0.0',
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modify—file watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
